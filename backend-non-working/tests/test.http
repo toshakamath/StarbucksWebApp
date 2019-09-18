@@ -1,0 +1,86 @@
+#case1
+POST http://localhost:5000:5000/signin
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{
+  "username": "12345@gmail.com",
+  "password": "12345"
+}
+
+###
+
+
+#case1
+POST http://localhost:5000:5001/signup
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{
+  "name": "deep",
+  "username": "deep@gmail.com",
+  "password": "deep"
+}
+
+###
+
+#case1
+POST http://localhost:5000:5001/card
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Token: 2f0e9a54f611867827b76bc5199a1478adeb615c78d54643f0947c33f989f2d746dc716d78f9526768dcd3102f330d943882a5ce5fc0161246694fa61e6ccf99a6678ded57b72306b4243b7ef465c17aa1df313f02e00e1e29a326e5a39274c2
+
+{
+  "number": 1234567,
+  "balance": 50.5,
+  "cvv": "134"
+}
+
+###
+
+#case1
+GET http://localhost:5000:5001/card
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Token: 2f0e9a54f611867827b76bc5199a1478adeb615c78d54643f0947c33f989f2d746dc716d78f9526768dcd3102f330d943882a5ce5fc0161246694fa61e6ccf99a6678ded57b72306b4243b7ef465c17aa1df313f02e00e1e29a326e5a39274c2
+
+###
+
+#case1
+DELETE http://localhost:5000:5001/card?number=1234567
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Token: 2f0e9a54f611867827b76bc5199a1478adeb615c78d54643f0947c33f989f2d746dc716d78f9526768dcd3102f330d943882a5ce5fc0161246694fa61e6ccf99a6678ded57b72306b4243b7ef465c17aa1df313f02e00e1e29a326e5a39274c2
+
+###
+
+#case1
+POST http://localhost:5000:5001/order
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Token: 2f0e9a54f611867827b76bc5199a1478adeb615c78d54643f0947c33f989f2d746dc716d78f9526768dcd3102f330d943882a5ce5fc0161246694fa61e6ccf99a6678ded57b72306b4243b7ef465c17aa1df313f02e00e1e29a326e5a39274c2
+
+{
+  "total": 10
+}
+
+###
+
+#case1
+POST http://localhost:5000:5001/payment
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Token: ad811395ea8457371f0edac8b379f0ec5ab785b379dc697cd479d5fc36735b3ef308eef614a0b0e9eeab868c6673293eab2b3b736dddac09a57989f73ae8ba570867fbbce497a2d13d92142918598089
+
+{
+  "number": 123456789
+}
+
+###
